@@ -4,9 +4,8 @@
 Our project presents a **data analysis of YouTube videos**, combining metadata from Kaggle with automatically extracted transcripts and English translations.  
 The aim is to understand how **video content and categories** relate to their transcripts and metadata, using **machine learning (Bag-of-Words)** to classify video categories.  
 
-We completed this project as part of **EGBI222 – Data Analytics** coursework.  
-All analysis and results are summarized in the accompanying **2-page PDF report** (`Group Project.pdf`).
-Link to our report [Group Project](https://docs.google.com/document/d/1zGWq8RTiSx3NteR595m72FY37u7MZJtdIOm9u6D3xAg/edit?usp=sharing)
+We completed this project as part of **EGBI222 – Computer Programming** coursework.  
+All analysis and results are summarized in the accompanying **2-page PDF report**, which is in Google Form (`Group Project.pdf`).
 
 ---
 
