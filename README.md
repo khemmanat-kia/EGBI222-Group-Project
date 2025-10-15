@@ -54,23 +54,27 @@ The dataset was cleaned to remove missing, duplicated, or irrelevant rows. Colum
 
 | Person | Data Range (Rows) | Input File | Output File |
 |--------|------------------|-------------|--------------|
-| 1 | 1–4,398 | transcripts_p1.csv | transcripts_en_p1.csv |
-| 2 | 4,399–8,796 | transcripts_p2.csv | transcripts_en_p2.csv |
-| 3 | 8,797–13,192 | transcripts_p3.csv | transcripts_en_p3.csv |
-| 4 | 13,193–17,589 | transcripts_p4.csv | transcripts_en_p4.csv |
+| 1 | 1–4,398 | transcripts_p1_1–4,398.csv | transcripts_en_p1_13,193–17,589.csv |
+| 2 | 4,399–8,796 | transcripts_p2_4,399–8,796.csv | transcripts_p2_13,193–17,589.csv |
+| 3 | 8,797–13,192 | transcripts_p3_8,797–13,192.csv | transcripts_p3_13,193–17,589.csv |
+| 4 | 13,193–17,589 | transcripts_p4_13,193–17,589.csv | transcripts_p4_13,193–17,589.csv |
 
 ### 3. Audio Transcription
 If a transcript column was missing or incomplete, audio data were processed using the **Whisper model** to automatically generate English transcripts. The model was executed in GPU mode (`device="cuda"`) for faster inference. Each output was saved in CSV format in a shared Drive folder.
 
 ### 4. Language Detection and Translation
-To ensure consistency, all transcripts were converted into **English**. A combination of language detection (`langdetect`) and translation models (OpenAI / Gemini API) was used.  
+To ensure consistency, all transcripts were converted into **English**. A language detection (`langdetect`) was used.  
 - Rows already in English were skipped to save time.  
 - Non-English texts were translated in small batches with retry logic for failed translations.  
 - The new column `transcripts_en` was added to the DataFrame.
 
-### 5. Data Integration
-All four translated subsets were merged into a single master dataset:
-This file was used for further text analysis and modeling.
+### 5. Merging and Data Consolidation
+After all members completed their portions, **all CSV files were merged** into a single master dataset named:
+This dataset contained both the original transcript (`transcript`) and the English-translated version (`transcript_en`).  
+After merging, these two columns were **separated** to create two independent datasets:
+- [transcript](https://drive.google.com/file/d/176C5GE1cDqjkVpf651AEjEUbh5oh3-Wf/view?usp=sharing.csv) → contained only the original transcripts  
+- [transcript_en](https://drive.google.com/file/d/17VB14Gx84Cct2LfMZbUFAUScdMK8sfBs/view?usp=sharing) → contained only the English-translated transcripts  
+This separation made later processing, language analysis, and model training more organized and efficient.
 
 ### 6. Text Vectorization (Bag-of-Words)
 The text in `transcripts_en` was transformed into numerical features using the **Bag-of-Words (BoW)** model with `CountVectorizer`. This allowed the model to quantify word frequencies across all videos and categories. Stop words were removed, and both unigrams and bigrams were included.
@@ -84,21 +88,7 @@ Model accuracy and F1 scores were calculated to evaluate performance.
 ### 8. Visualization and Interpretation
 Descriptive analysis and visualization were performed to understand category distribution and patterns:
 - **Horizontal bar charts** for top video categories  
-- **Pie charts** showing proportion of each category  
-- Optional gender and part-time status proportion graphs for extended data analysis  
-
-Plots were saved to the `/plots` directory for inclusion in the final report.
+- **Pie charts** showing the proportion of each category  
 
 ### 9. Export and Reporting
 All processed and translated data were exported back to **Google Drive** under the `/exports` folder. Each team member verified the data integrity, and the combined results were used to generate visual summaries and final insights.
-
----
-
-### ⚙️ Summary
-This methodology ensures:
-- **Scalability** — dataset divided across 4 people  
-- **Efficiency** — parallel translation and transcription  
-- **Accuracy** — verified language detection and correction  
-- **Reproducibility** — all files versioned and stored in Drive  
-- **Transparency** — each stage logged with progress tracking
-
