@@ -101,10 +101,6 @@ All processed and translated data were exported back to **Google Drive** under t
 | Metric | Value / Description |
 |:-------|:--------------------|
 | **Total videos analyzed** | 17,589 |
-| **Languages detected** | 12+ (Top: English, Thai, Japanese, Chinese) |
-| **Translated transcripts** | 100% successfully converted to English |
-| **Average transcript length** | ~620 words |
+| **Languages detected** | 12+ (Top: English, Portuguese, Spanish) |
+| **Translated transcripts** | Converted to English |
 | **Most common categories** | Entertainment (28%), Education (21%), Music (15%), People & Blogs (10%), News (8%) |
-| **Top frequent words** | “music”, “learn”, “life”, “vlog”, “news” |
-| **Longest transcripts** | Educational and commentary videos |
-| **Shortest transcripts** | Music and trailer videos |
