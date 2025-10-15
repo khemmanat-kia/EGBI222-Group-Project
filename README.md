@@ -103,4 +103,4 @@ All processed and translated data were exported back to **Google Drive** under t
 | **Total videos analyzed** | 17,589 |
 | **Languages detected** | 12+ (Top: English, Portuguese, Spanish) |
 | **Translated transcripts** | Converted to English |
-| **Most common categories** | Entertainment (28%), Education (21%), Music (15%), People & Blogs (10%), News (8%) |
+| **Most common categories** | People & Blogs (22.4%), Music (16.9%), Entertainment(12.8%) |
