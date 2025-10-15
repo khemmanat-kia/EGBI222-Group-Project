@@ -5,7 +5,7 @@ Our project presents a **data analysis of YouTube videos**, combining metadata f
 The aim is to understand how **video content and categories** relate to their transcripts and metadata, using **machine learning (Bag-of-Words)** to classify video categories.  
 
 We completed this project as part of **EGBI222 – Data Analytics** coursework.  
-All analysis and results are summarized in the accompanying **2-page PDF report** (`YouTube-Data-Summary.pdf`).
+All analysis and results are summarized in the accompanying **2-page PDF report** (`Group Project.pdf`).
 
 ---
 
