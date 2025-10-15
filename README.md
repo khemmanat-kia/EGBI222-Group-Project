@@ -6,6 +6,7 @@ The aim is to understand how **video content and categories** relate to their tr
 
 We completed this project as part of **EGBI222 – Data Analytics** coursework.  
 All analysis and results are summarized in the accompanying **2-page PDF report** (`Group Project.pdf`).
+Link to our report [Group Project](https://docs.google.com/document/d/1zGWq8RTiSx3NteR595m72FY37u7MZJtdIOm9u6D3xAg/edit?usp=sharing)
 
 ---
 
